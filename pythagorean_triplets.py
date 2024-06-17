@@ -1,19 +1,16 @@
-def generate_pythagorean_triplets(limit):
-    triplets = []
-    for a in range(1, limit):
-        for b in range(a, limit):
-            c = (a**2 + b**2) ** 0.5
-            if c.is_integer() and c <= limit:
-                triplets.append((a, b, int(c)))
-    return triplets
-
-def main():
-    limit = int(input("Enter upper limit: "))
-    triplets = generate_pythagorean_triplets(limit)
-    for triplet in triplets:
-        print(*triplet)
-
-if __name__ == "__main__":
-    main()
-
+n=int(input("Enter upper range : "))
+x=0
+y=0
+z=0
+for i in range(1,n+1):
+    x=i**2
+    a=i
+    for j in range(1,n+1):
+        y=j**2
+        b=j
+        for k in range(1,n+1):
+            z=k**2
+            c=k
+            if(x+y==z):
+                print(a,b,c)
 

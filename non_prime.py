@@ -1,8 +1,12 @@
-A = int(input("enter A value"))
-B = int(input("enter B value"))
-for num in range(A+1, B + 1):
-    if num > 1:
-        for i in range(2, int(num ** 0.5) + 1):
-            if num % i == 0:
-                print(num, end=',')
-                break
+n=int(input("enter 1st number : "))
+m=int(input("enter 2nd number : "))
+for i in range(n,m):
+    for j in range(2,i):
+        if(i==j):
+            continue
+        elif i%j==0:
+            print(i)
+            break
+
+            
+            
